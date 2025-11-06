@@ -748,3 +748,21 @@ img:hover {
     font-size: 1.6rem;
   }
 }
+
+
+.projects-heading{
+  margin-bottom: 20px;
+}
+
+.view-site {
+    color: #fff;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .view-site:hover {
+    transform: scale(1.05);
+  }
