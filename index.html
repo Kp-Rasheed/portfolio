@@ -1,410 +1,1133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rasheed Kp | Software Engineer</title>
+  <title>Rasheed Kp | Full-Stack Developer — Laravel, React &amp; Next.js</title>
+  <meta name="description" content="Rasheed Kp is a full-stack developer building scalable web platforms, e-commerce stores, mobile apps and AI-powered products with Laravel, React, Next.js, Magento and PostgreSQL." />
+  <meta name="author" content="Rasheed Kp" />
+  <meta name="keywords" content="Rasheed Kp, Full-Stack Developer, Laravel Developer, React Developer, Next.js, Magento, Shopify, PostgreSQL, AI-assisted development, Portfolio" />
+  <meta name="theme-color" content="#060912" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f5f7fb" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rasheed Kp | Full-Stack Developer" />
+  <meta property="og:description" content="Scalable web platforms, e-commerce, mobile apps and AI-powered products built with Laravel, React and Next.js." />
+  <meta property="og:image" content="images/hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rasheed Kp | Full-Stack Developer" />
+  <meta name="twitter:description" content="Scalable web platforms, e-commerce, mobile apps and AI-powered products." />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='28' fill='%23fff'%3ERK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Apply saved / system theme before paint to avoid a flash; enable JS-only styles -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        root.setAttribute('data-theme', theme);
+      } catch (e) {}
+      // Fail-safe: if script.js never runs, show all content instead of hidden reveal states
+      setTimeout(function () { if (!window.__portfolioReady) root.classList.remove('js'); }, 4000);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merienda:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rasheed Kp",
+    "jobTitle": "Full-Stack Developer",
+    "email": "mailto:shazrasheed5@gmail.com",
+    "telephone": "+919744756376",
+    "knowsAbout": ["Laravel", "React", "Next.js", "React Native", "Magento", "Shopify", "WordPress", "PostgreSQL", "MySQL", "REST APIs", "GraphQL", "AI-assisted development"],
+    "sameAs": [
+      "https://github.com/Kp-Rasheed",
+      "https://www.linkedin.com/in/mohammed-rasheed-kp"
+    ]
+  }
+  </script>
+
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="navbar glassy">
-    <h2 class="logo">Rasheed <span>Kp</span></h2>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <button id="theme-toggle" class="theme-btn">🌙</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-mark">
+      <span class="preloader-ring"></span>
+      <span class="preloader-text">RK</span>
+    </div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Ambient background -->
+  <div class="bg-ambient" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="bg-grid"></span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo" aria-label="Rasheed Kp — back to top">
+        <span class="logo-mark">RK</span>
+        <span class="logo-text">Rasheed <span>Kp</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Primary">
+        <ul>
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#ai" class="nav-link">AI</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-mobile">Let's talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn theme-btn" type="button" aria-label="Switch to light theme">
+          <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="burger"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <section id="hero" class="glassy hero">
-  <div class="hero-container">
-    <div class="hero-text">
-      <h2>Hello, I'm <span>Rasheed Kp</span></h2>
-      <h3>Creative Software Engineer</h3>
-      <p>
-        I build fast, scalable, and stunning web experiences using 
-        <strong>Laravel</strong>, <strong>React</strong>, and <strong>Next.js</strong>.
-        <br />
-        Passionate about futuristic UI design, backend architecture, and automation.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn">View My Work</a>
-        <a href="#contact" class="btn-outline">Let's Connect</a>
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="container hero-container">
+        <div class="hero-text">
+          <p class="eyebrow-pill reveal">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Open to freelance projects &amp; collaborations
+          </p>
+          <h1 id="hero-title" class="hero-title reveal" data-delay="1">
+            Hello, I'm <span class="gradient-text">Rasheed Kp</span>
+          </h1>
+          <p class="hero-role reveal" data-delay="2">
+            <span class="role-prefix">I'm a</span>
+            <span class="typed" data-words='["Full-Stack Developer","Laravel &amp; React Engineer","E-commerce Specialist","Mobile App Builder","AI-Assisted Developer"]'>Full-Stack Developer</span><span class="typed-caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-lead reveal" data-delay="3">
+            I build fast, scalable, and stunning web experiences using
+            <strong>Laravel</strong>, <strong>React</strong>, and <strong>Next.js</strong> —
+            from logistics platforms with live tracking to enterprise e-commerce and AI-powered apps.
+            Passionate about futuristic UI design, backend architecture, and automation.
+          </p>
+          <div class="hero-buttons reveal" data-delay="4">
+            <a href="#projects" class="btn btn-primary magnetic">
+              View My Work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn-ghost magnetic">Let's Connect</a>
+          </div>
+          <ul class="social-links reveal" data-delay="5" aria-label="Social profiles">
+            <li><a href="https://github.com/Kp-Rasheed" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/mohammed-rasheed-kp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/x._alchemist_.x?igsh=MWg2N3J4MWdlNmRpdg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="mailto:shazrasheed5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+            <li><a href="tel:+919744756376" aria-label="Call"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="2">
+          <div class="hero-image tilt">
+            <div class="hero-image-glow" aria-hidden="true"></div>
+            <img src="images/hero.png" alt="Illustration of a client and developer shaking hands" width="580" height="387" fetchpriority="high" />
+            <div class="image-overlay">
+              <p>Turning ideas into digital reality</p>
+            </div>
+          </div>
+          <span class="float-chip chip-a"><i class="fa-brands fa-laravel" aria-hidden="true"></i> Laravel</span>
+          <span class="float-chip chip-b"><i class="fa-brands fa-react" aria-hidden="true"></i> React</span>
+          <span class="float-chip chip-c"><i class="fa-solid fa-database" aria-hidden="true"></i> PostgreSQL</span>
+          <span class="float-chip chip-d"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> AI-assisted</span>
+        </div>
       </div>
-      <div class="social-links">
-        <a href="https://github.com/Kp-Rasheed/Kp-Rasheed" target="_blank">
-          <img src="images/github.svg" alt="GitHub" />
-        </a>
-        <a href="www.linkedin.com/in/mohammed-rasheed-kp" target="_blank">
-          <img src="images/linkedin-original.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://www.instagram.com/x._alchemist_.x?igsh=MWg2N3J4MWdlNmRpdg==" target="_blank">
-          <img src="images/2111463.png" alt="Instagram" />
-        </a>
-        <a href="mailto:shazrasheed5@gmail.com">
-          <img src="images/732200.png" alt="Email" />
-        </a>
-        <a href="tel:+919744756376">
-          <img src="images/724664.png" alt="Call" />
-        </a>
-      </div>
 
-    </div>
-
-    <div class="">
-      <img src="images/hero.png" alt="Developer at work" />
-      <div class="image-overlay">
-        <p>Turning ideas into digital reality </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
- <section id="about" class="glassy about">
-  <div class="about-content">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I have pursued my lifelong dream of becoming a developer, fueled by a deep passion for technology and creativity. 
-        As a Fullstack Developer, I thrive on turning ideas into scalable digital experiences. Over the years, I’ve worked with 
-        clients across diverse industries, helping businesses transform with modern web solutions.
-      </p>
-      <p>
-        I’m naturally curious, persistent, and innovative — constantly exploring new technologies to refine my craft and deliver excellence.
-      </p>
-    </div>
-
-    <div class="about-image">
-      <img src="images/about.png" alt="About US" />
-    </div>
-  </div>
-</section>
-
-
-  <section id="skills" class="glassy skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">Laravel</div>
-      <div class="skill">React Js</div>
-      <div class="skill">React Native</div>
-      <div class="skill">Magento</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">PostgreSQL</div>
-      <div class="skill">HTML5</div>
-      <div class="skill">CSS</div>
-      <div class="skill">Javascript</div>
-      <div class="skill">Firebase Console</div>
-      <div class="skill">Google Map API</div>
-      <div class="skill">Google Console</div>
-      <div class="skill">REST APIs</div>
-      <div class="skill">GraphQL</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Smart Git</div>
-    </div>
-  </section>
-
-  <section id="projects" class="glassy projects">
-  <h2 class="projects-heading">Projects</h2>
-  <div class="projects-grid">
-    <!-- Dodelivery -->
-    <div class="project-card glassy-card">
-      <h3>Dodelivery
-      </h3>
-      <p class="project-text">
-        A powerful logistics and delivery management platform built entirely in 
-        <strong>plain Laravel</strong> with a <strong>PostgreSQL</strong> backend.  
-        <span class="more-text">
-          The revamped version includes <strong>third-party API integrations</strong>, 
-          <strong>real-time webhook support</strong>, and fully functional 
-          <strong>Android & iOS apps</strong> for seamless on-the-go operations.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://dodelivery.co/" target="_blank" style="color: white;" class="view-site">
-        <i class="fa-solid fa-globe"></i>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span class="mouse"><span class="wheel"></span></span>
       </a>
-    </div>
+    </section>
 
-    <!-- Dispatcher & Dorider -->
-      <div class="project-card glassy-card dispatcher-card">
-      <h3>Dispatcher & Dorider
-      </h3>
-      <p class="project-text">
-        An advanced <strong>driver management system</strong> for logistics companies, 
-        featuring <strong>real-time live tracking</strong> and <strong>multi-driver management</strong>.  
-        <span class="more-text">
-          Includes <strong>intelligent dispatch automation</strong> to optimize routes 
-          and boost efficiency. Built using <strong>Laravel</strong> and <strong>PostgreSQL</strong>.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://dispatch.dodelivery.co/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
+    <!-- ============ STATS / ACHIEVEMENTS ============ -->
+    <section class="stats" aria-label="Highlights">
+      <div class="container stats-grid">
+        <div class="stat reveal">
+          <span class="stat-value"><span class="count" data-stat="projects">15</span>+</span>
+          <span class="stat-label">Projects delivered</span>
+        </div>
+        <div class="stat reveal" data-delay="1">
+          <span class="stat-value"><span class="count" data-stat="live">12</span></span>
+          <span class="stat-label">Live in production</span>
+        </div>
+        <div class="stat reveal" data-delay="2">
+          <span class="stat-value"><span class="count" data-stat="industries">10</span></span>
+          <span class="stat-label">Industries served</span>
+        </div>
+        <div class="stat reveal" data-delay="3">
+          <span class="stat-value"><span class="count" data-stat="platforms">3</span></span>
+          <span class="stat-label">Platforms — Web, Android &amp; iOS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container about-content">
+        <div class="about-text">
+          <p class="eyebrow reveal">About me</p>
+          <h2 id="about-title" class="section-title reveal">A developer who turns ideas into <span class="gradient-text">scalable products</span></h2>
+          <p class="reveal">
+            I have pursued my lifelong dream of becoming a developer, fueled by a deep passion for technology and creativity.
+            As a Fullstack Developer, I thrive on turning ideas into scalable digital experiences. Over the years, I’ve worked with
+            clients across diverse industries, helping businesses transform with modern web solutions.
+          </p>
+          <p class="reveal">
+            I’m naturally curious, persistent, and innovative — constantly exploring new technologies to refine my craft and deliver excellence.
+          </p>
+
+          <ul class="about-highlights">
+            <li class="reveal">
+              <span class="hl-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></span>
+              <div>
+                <h3>End-to-end ownership</h3>
+                <p>Backend, frontend, mobile apps and deployment — one developer across the whole stack.</p>
+              </div>
+            </li>
+            <li class="reveal" data-delay="1">
+              <span class="hl-icon"><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i></span>
+              <div>
+                <h3>Integration-heavy systems</h3>
+                <p>Shopify sync, third-party APIs, webhooks, POS and live tracking in real products.</p>
+              </div>
+            </li>
+            <li class="reveal" data-delay="2">
+              <span class="hl-icon"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></span>
+              <div>
+                <h3>AI-first workflow</h3>
+                <p>AI-assisted development and AI-powered features to ship faster without cutting corners.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-image reveal" data-delay="2">
+          <div class="frame">
+            <img src="images/about.png" alt="Illustration of a team collaborating around a desk" width="501" height="582" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">What I do</p>
+          <h2 id="services-title" class="section-title reveal">Services that move <span class="gradient-text">your business</span> forward</h2>
+          <p class="section-sub reveal">From a single landing page to multi-app platforms with mobile clients, I design, build and ship production software.</p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card spotlight reveal">
+            <span class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+            <h3>Full-Stack Web Applications</h3>
+            <p>Custom platforms built on Laravel with React or Next.js frontends — dashboards, management systems and SaaS-style products.</p>
+            <ul class="service-tags"><li>Laravel</li><li>React</li><li>Next.js</li></ul>
+          </article>
+          <article class="service-card spotlight reveal" data-delay="1">
+            <span class="service-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></span>
+            <h3>E-commerce Development</h3>
+            <p>Enterprise Magento stores, Shopify-integrated platforms and custom carts with inventory sync, POS and multi-language support.</p>
+            <ul class="service-tags"><li>Magento</li><li>Shopify</li><li>Custom</li></ul>
+          </article>
+          <article class="service-card spotlight reveal" data-delay="2">
+            <span class="service-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></span>
+            <h3>Mobile Apps</h3>
+            <p>Android and iOS companion apps that connect to your platform for drivers, customers and on-the-go operations.</p>
+            <ul class="service-tags"><li>React Native</li><li>Android</li><li>iOS</li></ul>
+          </article>
+          <article class="service-card spotlight reveal">
+            <span class="service-icon"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></span>
+            <h3>APIs &amp; System Integrations</h3>
+            <p>REST and GraphQL APIs, webhooks and third-party integrations that keep your systems talking in real time.</p>
+            <ul class="service-tags"><li>REST</li><li>GraphQL</li><li>Webhooks</li></ul>
+          </article>
+          <article class="service-card spotlight reveal" data-delay="1">
+            <span class="service-icon"><i class="fa-solid fa-newspaper" aria-hidden="true"></i></span>
+            <h3>CMS &amp; Business Websites</h3>
+            <p>Fast corporate websites with dynamic content, custom pages and blogs your team can manage without a developer.</p>
+            <ul class="service-tags"><li>WordPress</li><li>Custom CMS</li></ul>
+          </article>
+          <article class="service-card spotlight reveal" data-delay="2">
+            <span class="service-icon"><i class="fa-solid fa-robot" aria-hidden="true"></i></span>
+            <h3>AI &amp; Automation</h3>
+            <p>AI-powered features, smart predictions and automated workflows — like dispatch automation — built into real products.</p>
+            <ul class="service-tags"><li>AI modules</li><li>Automation</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">Tech stack</p>
+          <h2 id="skills-title" class="section-title reveal">Skills &amp; <span class="gradient-text">technologies</span></h2>
+          <p class="section-sub reveal">Tap a technology to see the projects where I used it.</p>
+        </header>
+
+        <div class="tabs reveal" role="group" aria-label="Skill categories">
+          <button class="tab is-active" type="button" aria-pressed="true" data-skill-filter="all">All</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="backend">Backend</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="frontend">Frontend</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="mobile">Mobile</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="data">Databases</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="commerce">E-commerce &amp; CMS</button>
+          <button class="tab" type="button" aria-pressed="false" data-skill-filter="cloud">Cloud &amp; Tools</button>
+        </div>
+
+        <!-- data-match lists the project tech tags that count toward each skill -->
+        <ul class="skills-grid" id="skills-grid">
+          <li class="skill" data-group="backend" data-match="Laravel"><button type="button"><i class="fa-brands fa-laravel" aria-hidden="true"></i><span class="skill-name">Laravel</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="backend" data-match="Laravel,Magento,WordPress"><button type="button"><i class="fa-brands fa-php" aria-hidden="true"></i><span class="skill-name">PHP</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="backend" data-match="REST APIs"><button type="button"><i class="fa-solid fa-server" aria-hidden="true"></i><span class="skill-name">REST APIs</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="backend" data-match="GraphQL"><button type="button"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span class="skill-name">GraphQL</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="backend" data-match="Webhooks"><button type="button"><i class="fa-solid fa-bolt" aria-hidden="true"></i><span class="skill-name">Webhooks</span><span class="skill-count"></span></button></li>
+
+          <li class="skill" data-group="frontend" data-match="React.js"><button type="button"><i class="fa-brands fa-react" aria-hidden="true"></i><span class="skill-name">React Js</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="frontend" data-match="Next.js"><button type="button"><i class="fa-solid fa-n" aria-hidden="true"></i><span class="skill-name">Next.js</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="frontend" data-match="JavaScript,React.js,Next.js"><button type="button"><i class="fa-brands fa-js" aria-hidden="true"></i><span class="skill-name">JavaScript</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="frontend" data-match=""><button type="button"><i class="fa-brands fa-html5" aria-hidden="true"></i><span class="skill-name">HTML5</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="frontend" data-match=""><button type="button"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><span class="skill-name">CSS</span><span class="skill-count"></span></button></li>
+
+          <li class="skill" data-group="mobile" data-match=""><button type="button"><i class="fa-brands fa-react" aria-hidden="true"></i><span class="skill-name">React Native</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="mobile" data-match="Android"><button type="button"><i class="fa-brands fa-android" aria-hidden="true"></i><span class="skill-name">Android apps</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="mobile" data-match="iOS"><button type="button"><i class="fa-brands fa-apple" aria-hidden="true"></i><span class="skill-name">iOS apps</span><span class="skill-count"></span></button></li>
+
+          <li class="skill" data-group="data" data-match="MySQL"><button type="button"><i class="fa-solid fa-database" aria-hidden="true"></i><span class="skill-name">MySQL</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="data" data-match="PostgreSQL"><button type="button"><i class="fa-solid fa-database" aria-hidden="true"></i><span class="skill-name">PostgreSQL</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="data cloud" data-match=""><button type="button"><i class="fa-solid fa-fire" aria-hidden="true"></i><span class="skill-name">Firebase Console</span><span class="skill-count"></span></button></li>
+
+          <li class="skill" data-group="commerce" data-match="Magento"><button type="button"><i class="fa-brands fa-magento" aria-hidden="true"></i><span class="skill-name">Magento</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="commerce" data-match="Shopify"><button type="button"><i class="fa-brands fa-shopify" aria-hidden="true"></i><span class="skill-name">Shopify integration</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="commerce" data-match="WordPress"><button type="button"><i class="fa-brands fa-wordpress" aria-hidden="true"></i><span class="skill-name">WordPress</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="commerce" data-match="Custom CMS"><button type="button"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i><span class="skill-name">Custom CMS</span><span class="skill-count"></span></button></li>
+
+          <li class="skill" data-group="cloud" data-match=""><button type="button"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i><span class="skill-name">Google Map API</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="cloud" data-match=""><button type="button"><i class="fa-brands fa-google" aria-hidden="true"></i><span class="skill-name">Google Console</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="cloud" data-match=""><button type="button"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="skill-name">Git &amp; GitHub</span><span class="skill-count"></span></button></li>
+          <li class="skill" data-group="cloud" data-match=""><button type="button"><i class="fa-solid fa-code-branch" aria-hidden="true"></i><span class="skill-name">Smart Git</span><span class="skill-count"></span></button></li>
+        </ul>
+
+        <div class="expertise-grid">
+          <div class="expertise reveal">
+            <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+            <h3>Application architecture</h3>
+            <p>Multi-app systems — a web platform, a dispatcher and Android/iOS clients sharing one backend.</p>
+          </div>
+          <div class="expertise reveal" data-delay="1">
+            <i class="fa-solid fa-plug" aria-hidden="true"></i>
+            <h3>API development &amp; integrations</h3>
+            <p>Laravel APIs for React/Next.js frontends, Shopify sync, third-party APIs and real-time webhooks.</p>
+          </div>
+          <div class="expertise reveal" data-delay="2">
+            <i class="fa-solid fa-gauge-high" aria-hidden="true"></i>
+            <h3>Performance optimisation</h3>
+            <p>Enterprise-grade Magento stores, fast-loading CMS sites and Next.js storefronts.</p>
+          </div>
+          <div class="expertise reveal" data-delay="3">
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            <h3>Production delivery</h3>
+            <p>Projects shipped and running live for real businesses — not just demos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AI-ASSISTED DEVELOPMENT ============ -->
+    <section id="ai" class="section ai" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="ai-panel">
+          <div class="ai-intro">
+            <p class="eyebrow reveal">AI-assisted development</p>
+            <h2 id="ai-title" class="section-title reveal">Building faster and smarter <span class="gradient-text">with AI</span></h2>
+            <p class="reveal">
+              AI is part of how I build — and part of what I build. I use AI tools throughout my development workflow
+              to move from idea to production faster, and I integrate AI capabilities and automation into real
+              client products where they deliver measurable value.
+            </p>
+
+            <ol class="ai-flow reveal" aria-label="My AI-assisted workflow">
+              <li><span>01</span> Plan</li>
+              <li><span>02</span> Generate</li>
+              <li><span>03</span> Review</li>
+              <li><span>04</span> Test</li>
+              <li><span>05</span> Ship</li>
+            </ol>
+          </div>
+
+          <div class="ai-grid">
+            <article class="ai-card spotlight reveal">
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+              <h3>AI-assisted engineering</h3>
+              <p>AI pair-programming for scaffolding, refactoring, debugging and documentation — with every change reviewed and tested before it ships.</p>
+            </article>
+            <article class="ai-card spotlight reveal" data-delay="1">
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              <h3>AI-powered applications</h3>
+              <p>Products with AI at the core — like <a href="#projects" data-open-project="taxman">Taxman.Ai</a>, a Laravel platform with custom AI modules for smart tax predictions.</p>
+            </article>
+            <article class="ai-card spotlight reveal" data-delay="2">
+              <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              <h3>Automation</h3>
+              <p>Workflows that remove manual work — like the intelligent dispatch automation in <a href="#projects" data-open-project="dispatcher">Dispatcher &amp; Dorider</a>.</p>
+            </article>
+            <article class="ai-card spotlight reveal" data-delay="3">
+              <i class="fa-solid fa-link" aria-hidden="true"></i>
+              <h3>AI integrations</h3>
+              <p>Connecting AI services to existing Laravel and JavaScript systems through clean APIs, so teams get AI features without a rewrite.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <!--
+      Tip: add your employment history (company, role, dates) as extra .timeline-item
+      entries below — this section currently summarises the domains your projects cover.
+    -->
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">Experience</p>
+          <h2 id="experience-title" class="section-title reveal">Industries I've <span class="gradient-text">built for</span></h2>
+          <p class="section-sub reveal">Real-world delivery across logistics, retail, travel, real estate, finance and more.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-truck-fast"></i></span>
+            <div class="timeline-card">
+              <h3>Logistics &amp; Delivery Platforms</h3>
+              <p>Delivery management, driver management with real-time live tracking, multi-driver dispatch automation, webhooks and companion Android &amp; iOS apps.</p>
+              <ul class="tag-list"><li>Dodelivery</li><li>Dispatcher &amp; Dorider</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></span>
+            <div class="timeline-card">
+              <h3>E-commerce &amp; Retail</h3>
+              <p>Enterprise Magento stores with POS, multi-language support and inventory sync; a Shopify-integrated Laravel store; Next.js storefronts and pharmacy e-commerce with real-time stock control.</p>
+              <ul class="tag-list"><li>Bahrain Duty Free</li><li>Thebowery Company</li><li>Al-Huzaifa</li><li>Keysouq</li><li>Docib Pharmacy</li><li>Store9</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+            <div class="timeline-card">
+              <h3>AI &amp; Finance</h3>
+              <p>A Laravel application with custom AI modules for smart tax predictions, personalised analytics and a mobile APK.</p>
+              <ul class="tag-list"><li>Taxman.Ai</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-plane-departure"></i></span>
+            <div class="timeline-card">
+              <h3>Travel &amp; Real Estate</h3>
+              <p>A travel agency management platform with flight chart management, plus property listing and real estate platforms built for search performance.</p>
+              <ul class="tag-list"><li>Zamra Travels</li><li>Property9</li><li>Adana Real Estate</li></ul>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"><i class="fa-solid fa-building"></i></span>
+            <div class="timeline-card">
+              <h3>Corporate &amp; Agency Websites</h3>
+              <p>CMS-driven websites with dynamic content, custom pages and blog modules for advisory, security-tech and talent agency clients.</p>
+              <ul class="tag-list"><li>Al Mudabir Group</li><li>Smartec</li><li>The People Agency</li></ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <!--
+      Each .project-card is the single source of truth:
+        data-category : filter groups (webapp, ecommerce, cms, mobile, ai)
+        data-tech     : comma-separated tech tags (also used for skill counts)
+        data-industry : used for the "Industries served" stat
+        data-live     : present when the project has a public URL
+      The hidden .project-more block is shown in the details dialog.
+    -->
+    <section id="projects" class="section projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal">Portfolio</p>
+          <h2 id="projects-title" class="section-title reveal">Featured <span class="gradient-text">projects</span></h2>
+          <p class="section-sub reveal">Live products for real clients — filter by type, or search by name and technology.</p>
+        </header>
+
+        <div class="project-toolbar reveal">
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
+            <button class="filter" type="button" data-filter="webapp" aria-pressed="false">Web Apps <span class="filter-count"></span></button>
+            <button class="filter" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce <span class="filter-count"></span></button>
+            <button class="filter" type="button" data-filter="cms" aria-pressed="false">CMS <span class="filter-count"></span></button>
+            <button class="filter" type="button" data-filter="mobile" aria-pressed="false">Mobile <span class="filter-count"></span></button>
+            <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI &amp; Automation <span class="filter-count"></span></button>
+          </div>
+          <label class="search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <span class="visually-hidden">Search projects</span>
+            <input type="search" id="project-search" placeholder="Search projects or tech…" autocomplete="off" />
+          </label>
+        </div>
+
+        <p class="active-tech" id="active-tech" hidden>
+          Showing projects using <strong></strong>
+          <button type="button" class="clear-tech">Clear <i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </p>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Dodelivery -->
+          <article class="project-card spotlight" id="project-dodelivery" data-category="webapp mobile" data-tech="Laravel,PostgreSQL,REST APIs,Webhooks,Android,iOS" data-industry="Logistics" data-live>
+            <div class="project-cover cover-logistics">
+              <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
+              <span class="cover-label">Logistics</span>
+              <span class="badge-featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Dodelivery</h3>
+              <p class="project-text">
+                A powerful logistics and delivery management platform built entirely in
+                <strong>plain Laravel</strong> with a <strong>PostgreSQL</strong> backend.
+              </p>
+              <ul class="tech-tags"><li>Laravel</li><li>PostgreSQL</li><li>Webhooks</li><li>Android</li><li>iOS</li></ul>
+              <div class="project-more" hidden>
+                <p>The revamped version includes <strong>third-party API integrations</strong>, <strong>real-time webhook support</strong>, and fully functional <strong>Android &amp; iOS apps</strong> for seamless on-the-go operations.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>End-to-end delivery management platform</li>
+                  <li>Third-party API integrations</li>
+                  <li>Real-time webhook support</li>
+                  <li>Companion Android &amp; iOS apps</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Keeping a web platform, external services and two mobile apps in sync — handled with webhook-driven, real-time updates on a single Laravel + PostgreSQL backend.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://dodelivery.co/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Dodelivery live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Dispatcher & Dorider -->
+          <article class="project-card spotlight" id="project-dispatcher" data-category="webapp ai" data-tech="Laravel,PostgreSQL,Live tracking,Automation" data-industry="Logistics" data-live>
+            <div class="project-cover cover-image">
+              <img src="images/dispatcher-dorider-preview.png" alt="" width="1599" height="980" loading="lazy" decoding="async" />
+              <span class="cover-label">Logistics</span>
+              <span class="badge-featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Dispatcher &amp; Dorider</h3>
+              <p class="project-text">
+                An advanced <strong>driver management system</strong> for logistics companies,
+                featuring <strong>real-time live tracking</strong> and <strong>multi-driver management</strong>.
+              </p>
+              <ul class="tech-tags"><li>Laravel</li><li>PostgreSQL</li><li>Live tracking</li><li>Automation</li></ul>
+              <div class="project-more" hidden>
+                <p>Includes <strong>intelligent dispatch automation</strong> to optimize routes and boost efficiency. Built using <strong>Laravel</strong> and <strong>PostgreSQL</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Real-time live driver tracking</li>
+                  <li>Multi-driver management</li>
+                  <li>Intelligent dispatch automation</li>
+                  <li>Route optimisation for efficiency</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Replacing manual job assignment with automated dispatch, so operators can manage many drivers at once while routes stay efficient.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://dispatch.dodelivery.co/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Dispatcher live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Taxman.Ai -->
+          <article class="project-card spotlight" id="project-taxman" data-category="webapp ai mobile" data-tech="Laravel,AI,Android" data-industry="Finance" data-live>
+            <div class="project-cover cover-ai">
+              <i class="fa-solid fa-brain" aria-hidden="true"></i>
+              <span class="cover-label">AI · Finance</span>
+              <span class="badge-featured">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Taxman.Ai</h3>
+              <p class="project-text">
+                A <strong>pure Laravel application</strong> integrated with <strong>custom AI modules</strong>
+                for smart tax predictions.
+              </p>
+              <ul class="tech-tags"><li>Laravel</li><li>AI modules</li><li>Android</li></ul>
+              <div class="project-more" hidden>
+                <p>Includes a <strong>mobile APK</strong> for on-the-go access and personalized tax analytics.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Custom AI modules for smart tax predictions</li>
+                  <li>Personalised tax analytics</li>
+                  <li>Mobile APK for on-the-go access</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Bringing AI-driven predictions into a conventional Laravel application and delivering them to users on both web and mobile.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://taxmen.ai/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Taxman.Ai live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Keysouq -->
+          <article class="project-card spotlight" id="project-keysouq" data-category="ecommerce" data-tech="Laravel,Shopify,REST APIs" data-industry="Gaming" data-live>
+            <div class="project-cover cover-commerce">
+              <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+              <span class="cover-label">E-commerce</span>
+            </div>
+            <div class="project-body">
+              <h3>Keysouq</h3>
+              <p class="project-text">
+                A <strong>Shopify-integrated Laravel platform</strong> for selling digital gaming keys.
+              </p>
+              <ul class="tech-tags"><li>Laravel</li><li>Shopify</li><li>API sync</li></ul>
+              <div class="project-more" hidden>
+                <p>Features <strong>custom Shopify synchronization</strong> with a <strong>Laravel-based frontend</strong> ensuring real-time product updates.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Custom Shopify synchronisation</li>
+                  <li>Laravel-based storefront</li>
+                  <li>Real-time product updates</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Keeping a custom Laravel frontend and Shopify catalogue consistent in real time for fast-moving digital products.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://keysouq.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Keysouq live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bahrain Duty Free -->
+          <article class="project-card spotlight" id="project-bdf" data-category="ecommerce" data-tech="Magento" data-industry="Retail" data-live>
+            <div class="project-cover cover-commerce">
+              <i class="fa-solid fa-plane" aria-hidden="true"></i>
+              <span class="cover-label">E-commerce</span>
+            </div>
+            <div class="project-body">
+              <h3>Bahrain Duty Free</h3>
+              <p class="project-text">
+                A high-end <strong>Magento-based e-commerce solution</strong> developed for Bahrain Duty Free.
+              </p>
+              <ul class="tech-tags"><li>Magento</li><li>Multi-language</li><li>Inventory sync</li></ul>
+              <div class="project-more" hidden>
+                <p>Integrating <strong>multi-language support</strong>, <strong>inventory sync</strong>, and a robust order management system.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Multi-language storefront</li>
+                  <li>Inventory synchronisation</li>
+                  <li>Robust order management</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Serving a multilingual audience while keeping stock levels and orders accurate on a high-end retail store.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://bdutyfree.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Bahrain Duty Free live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Thebowery Company -->
+          <article class="project-card spotlight" id="project-bowery" data-category="ecommerce" data-tech="Magento,POS" data-industry="Retail" data-live>
+            <div class="project-cover cover-commerce">
+              <i class="fa-solid fa-store" aria-hidden="true"></i>
+              <span class="cover-label">E-commerce</span>
+            </div>
+            <div class="project-body">
+              <h3>Thebowery Company</h3>
+              <p class="project-text">
+                A <strong>Magento-based e-commerce website</strong> designed with a sleek UI.
+              </p>
+              <ul class="tech-tags"><li>Magento</li><li>POS</li></ul>
+              <div class="project-more" hidden>
+                <p>Integrated <strong>POS functionality</strong> for seamless retail management and built for <strong>enterprise-grade performance</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Sleek, custom storefront UI</li>
+                  <li>Integrated POS for retail management</li>
+                  <li>Enterprise-grade performance</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Unifying online and in-store retail through POS integration without compromising storefront performance.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://thebowerycompany.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Thebowery Company live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Al-Huzaifa -->
+          <article class="project-card spotlight" id="project-alhuzaifa" data-category="ecommerce" data-tech="Magento" data-industry="Retail" data-live>
+            <div class="project-cover cover-commerce">
+              <i class="fa-solid fa-couch" aria-hidden="true"></i>
+              <span class="cover-label">E-commerce</span>
+            </div>
+            <div class="project-body">
+              <h3>Al-Huzaifa</h3>
+              <p class="project-text">
+                A modern <strong>Magento-powered e-commerce platform</strong> built for a luxury furniture brand.
+              </p>
+              <ul class="tech-tags"><li>Magento</li><li>Custom CMS modules</li></ul>
+              <div class="project-more" hidden>
+                <p>Offering an elegant shopping experience with optimized performance and custom CMS modules.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Elegant luxury shopping experience</li>
+                  <li>Optimised performance</li>
+                  <li>Custom CMS modules</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Delivering a premium, image-rich brand experience on Magento while keeping pages fast.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://www.alhuzaifa.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Al-Huzaifa live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Store9 -->
+          <article class="project-card spotlight" id="project-store9" data-category="ecommerce webapp" data-tech="Next.js,Laravel,REST APIs" data-industry="Retail">
+            <div class="project-cover cover-web">
+              <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+              <span class="cover-label">Full-stack</span>
+            </div>
+            <div class="project-body">
+              <h3>Store9</h3>
+              <p class="project-text">
+                A full-stack <strong>e-commerce platform</strong> developed using <strong>Next.js</strong>
+                for lightning-fast front-end performance, integrated with Laravel APIs.
+              </p>
+              <ul class="tech-tags"><li>Next.js</li><li>Laravel</li><li>REST APIs</li></ul>
+              <div class="project-more" hidden>
+                <p>Features include <strong>product browsing</strong>, <strong>cart management</strong>, and <strong>user account handling</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Product browsing</li>
+                  <li>Cart management</li>
+                  <li>User account handling</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>A decoupled architecture — Next.js for a fast storefront, Laravel APIs for the business logic.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Property9 -->
+          <article class="project-card spotlight" id="project-property9" data-category="webapp" data-tech="React.js,Laravel,MySQL,REST APIs" data-industry="Real Estate">
+            <div class="project-cover cover-web">
+              <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+              <span class="cover-label">Full-stack</span>
+            </div>
+            <div class="project-body">
+              <h3>Property9</h3>
+              <p class="project-text">
+                A property listing platform featuring a <strong>React.js</strong> frontend
+                and a <strong>Laravel + MySQL</strong> backend API.
+              </p>
+              <ul class="tech-tags"><li>React.js</li><li>Laravel</li><li>MySQL</li></ul>
+              <div class="project-more" hidden>
+                <p>Designed for scalability and optimized property search experience.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Property listings</li>
+                  <li>Optimised property search</li>
+                  <li>Scalable API-driven architecture</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Keeping property search fast as listings grow, with a React SPA on top of a Laravel + MySQL API.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Docib Pharmacy -->
+          <article class="project-card spotlight" id="project-docib" data-category="ecommerce webapp" data-tech="E-commerce,Inventory" data-industry="Healthcare">
+            <div class="project-cover cover-health">
+              <i class="fa-solid fa-prescription-bottle-medical" aria-hidden="true"></i>
+              <span class="cover-label">Healthcare</span>
+            </div>
+            <div class="project-body">
+              <h3>Docib Pharmacy</h3>
+              <p class="project-text">
+                A fully customized <strong>e-commerce and inventory management system</strong>
+                built for a pharmacy chain.
+              </p>
+              <ul class="tech-tags"><li>E-commerce</li><li>Inventory</li></ul>
+              <div class="project-more" hidden>
+                <p>Combines online ordering with <strong>real-time stock control</strong> and <strong>pharma-specific product workflows</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Online ordering</li>
+                  <li>Real-time stock control</li>
+                  <li>Pharma-specific product workflows</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Bringing online sales and multi-location inventory together with workflows that fit how a pharmacy actually operates.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Zamra Travels -->
+          <article class="project-card spotlight" id="project-zamra" data-category="webapp" data-tech="Custom platform" data-industry="Travel" data-live>
+            <div class="project-cover cover-travel">
+              <i class="fa-solid fa-plane-departure" aria-hidden="true"></i>
+              <span class="cover-label">Travel</span>
+            </div>
+            <div class="project-body">
+              <h3>Zamra Travels</h3>
+              <p class="project-text">
+                A fully customized <strong>travel agency management platform</strong>
+                built specifically for travel businesses.
+              </p>
+              <ul class="tech-tags"><li>Custom platform</li><li>Agency management</li></ul>
+              <div class="project-more" hidden>
+                <p>Includes <strong>flight chart management</strong>, <strong>agency management</strong>, and a wide range of <strong>travel agency–based functionalities</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Flight chart management</li>
+                  <li>Agency management</li>
+                  <li>Travel-agency-specific workflows</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Modelling the day-to-day operations of a travel agency in one tailored system instead of spreadsheets and generic tools.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://zamratravels.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Zamra Travels live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- The People Agency -->
+          <article class="project-card spotlight" id="project-people" data-category="cms" data-tech="WordPress" data-industry="Talent &amp; Media" data-live>
+            <div class="project-cover cover-cms">
+              <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+              <span class="cover-label">CMS</span>
+            </div>
+            <div class="project-body">
+              <h3>The People Agency</h3>
+              <p class="project-text">
+                A <strong>WordPress-powered CMS website</strong> designed for a talent and modeling agency.
+              </p>
+              <ul class="tech-tags"><li>WordPress</li><li>CMS</li></ul>
+              <div class="project-more" hidden>
+                <p>The website delivers a minimal, fast-loading interface with intuitive admin controls for content management.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Minimal, fast-loading interface</li>
+                  <li>Intuitive admin controls</li>
+                </ul>
+                <h4>Challenges solved</h4>
+                <p>Giving a non-technical team full control over their talent content while keeping the site fast.</p>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://thepeople-agency.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit The People Agency live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Adana Real Estate -->
+          <article class="project-card spotlight" id="project-adana" data-category="cms" data-tech="Custom CMS" data-industry="Real Estate" data-live>
+            <div class="project-cover cover-cms">
+              <i class="fa-solid fa-city" aria-hidden="true"></i>
+              <span class="cover-label">CMS</span>
+            </div>
+            <div class="project-body">
+              <h3>Adana Real Estate</h3>
+              <p class="project-text">
+                A fully customized <strong>CMS-based website</strong> built for a real estate company.
+              </p>
+              <ul class="tech-tags"><li>Custom CMS</li><li>Blog</li></ul>
+              <div class="project-more" hidden>
+                <p>Includes <strong>dynamic content management</strong>, <strong>customizable pages</strong>, and <strong>integrated blog functionality</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Dynamic content management</li>
+                  <li>Customisable pages</li>
+                  <li>Integrated blog</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://www.adanarealestate.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Adana Real Estate live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Al Mudabir Group -->
+          <article class="project-card spotlight" id="project-almudabir" data-category="cms" data-tech="Custom CMS" data-industry="Corporate Advisory" data-live>
+            <div class="project-cover cover-cms">
+              <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+              <span class="cover-label">CMS</span>
+            </div>
+            <div class="project-body">
+              <h3>Al Mudabir Group</h3>
+              <p class="project-text">
+                A fully customized <strong>corporate CMS website</strong> built for an industry advisory firm.
+              </p>
+              <ul class="tech-tags"><li>Custom CMS</li><li>Blog</li></ul>
+              <div class="project-more" hidden>
+                <p>Features <strong>dynamic content updates</strong>, <strong>custom pages</strong>, and <strong>blog management</strong>.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Dynamic content updates</li>
+                  <li>Custom pages</li>
+                  <li>Blog management</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://www.almudabirgroup.com/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Al Mudabir Group live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Smartec -->
+          <article class="project-card spotlight" id="project-smartec" data-category="cms" data-tech="Custom CMS" data-industry="Security Tech" data-live>
+            <div class="project-cover cover-cms">
+              <i class="fa-solid fa-video" aria-hidden="true"></i>
+              <span class="cover-label">CMS</span>
+            </div>
+            <div class="project-body">
+              <h3>Smartec</h3>
+              <p class="project-text">
+                A fully customized <strong>CMS-based website</strong> developed for a CCTV and automation solutions company.
+              </p>
+              <ul class="tech-tags"><li>Custom CMS</li><li>Blog</li></ul>
+              <div class="project-more" hidden>
+                <p>Includes <strong>dynamic content management</strong>, <strong>custom pages</strong>, and <strong>blog modules</strong> for easy updates.</p>
+                <h4>Key features</h4>
+                <ul>
+                  <li>Dynamic content management</li>
+                  <li>Custom pages</li>
+                  <li>Blog modules</li>
+                </ul>
+              </div>
+              <div class="project-actions">
+                <button type="button" class="link-btn read-more">View details <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                <a href="https://smartec.ae/" target="_blank" rel="noopener noreferrer" class="view-site" aria-label="Visit Smartec live site"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="projects-empty" id="projects-empty" hidden>
+          <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
+          No projects match your search.
+        </p>
+
+        <div class="projects-more">
+          <button type="button" class="btn btn-ghost" id="load-more" hidden>
+            Show all projects <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2>Have a product idea? Let's build it <span class="gradient-text">properly</span>.</h2>
+          <p>Web platforms, e-commerce, mobile apps or AI features — tell me what you need.</p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn btn-primary magnetic">Start a project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="mailto:shazrasheed5@gmail.com" class="btn btn-ghost magnetic"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact-content">
+        <div class="contact-text">
+          <p class="eyebrow reveal">Contact</p>
+          <h2 id="contact-title" class="section-title reveal">Let's work <span class="gradient-text">together</span></h2>
+          <p class="reveal">
+            Have a project in mind, or just want to say hi?
+            Feel free to drop a message — I’m always open to discussing
+            new ideas, collaborations, or freelance opportunities.
+          </p>
+
+          <ul class="contact-cards">
+            <li class="reveal">
+              <span class="cc-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+              <div>
+                <span class="cc-label">Email</span>
+                <a href="mailto:shazrasheed5@gmail.com">shazrasheed5@gmail.com</a>
+              </div>
+              <button type="button" class="icon-btn copy-btn" data-copy="shazrasheed5@gmail.com" aria-label="Copy email address">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              </button>
+            </li>
+            <li class="reveal" data-delay="1">
+              <span class="cc-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+              <div>
+                <span class="cc-label">Phone</span>
+                <a href="tel:+919744756376">+91 97447 56376</a>
+              </div>
+              <button type="button" class="icon-btn copy-btn" data-copy="+919744756376" aria-label="Copy phone number">
+                <i class="fa-regular fa-copy" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
+
+          <div class="contact-image reveal" data-delay="2">
+            <img src="images/contact.png" alt="Illustration of a phone receiving a new message" width="500" height="395" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="9b7ac275-36cc-48ff-a25e-2f89b72bb7a1" />
+          <input type="hidden" name="subject" value="New message from your portfolio" />
+          <input type="checkbox" name="botcheck" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <h3 class="form-title">Send a message</h3>
+
+          <div class="field">
+            <input type="text" id="cf-name" name="name" placeholder=" " autocomplete="name" required />
+            <label for="cf-name">Your Name</label>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <input type="email" id="cf-email" name="email" placeholder=" " autocomplete="email" required />
+            <label for="cf-email">Your Email</label>
+            <span class="field-error" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <textarea id="cf-message" name="message" placeholder=" " rows="5" maxlength="2000" required></textarea>
+            <label for="cf-message">Your Message</label>
+            <span class="field-meta"><span class="field-error" aria-live="polite"></span><span class="char-count" aria-hidden="true">0 / 2000</span></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">
+            <span class="btn-label">Send Message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <span class="logo-mark">RK</span>
+          <span class="logo-text">Rasheed <span>Kp</span></span>
         </a>
+        <p>Full-stack developer building scalable web platforms, e-commerce, mobile apps and AI-powered products.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <h3>Navigate</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <ul class="social-links">
+          <li><a href="https://github.com/Kp-Rasheed" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/mohammed-rasheed-kp" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/x._alchemist_.x?igsh=MWg2N3J4MWdlNmRpdg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="mailto:shazrasheed5@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Keysouq -->
-    <div class="project-card glassy-card">
-      <h3>Keysouq
-      
-      </h3>
-      <p class="project-text">
-        A <strong>Shopify-integrated Laravel platform</strong> for selling digital gaming keys.  
-        <span class="more-text">
-          Features <strong>custom Shopify synchronization</strong> with a 
-          <strong>Laravel-based frontend</strong> ensuring real-time product updates.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://keysouq.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
+    <div class="container footer-bottom">
+      <p>Copyright © <span id="year">2025</span> Rasheed Kp - All rights reserved</p>
+      <a href="#hero" class="back-top-link">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
     </div>
-
-    <!-- Thebowery Company -->
-     <div class="project-card glassy-card">
-      <h3>Thebowery Company
-        
-      </h3>
-      <p class="project-text">
-        A <strong>Magento-based e-commerce website</strong> designed with a sleek UI.  
-        <span class="more-text">
-          Integrated <strong>POS functionality</strong> for seamless retail management and built 
-          for <strong>enterprise-grade performance</strong>.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://thebowerycompany.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-    <!-- Al-Huzaifa -->
-    <div class="project-card glassy-card">
-      <h3>Al-Huzaifa
-        
-      </h3>
-     <p class="project-text">
-        A modern <strong>Magento-powered e-commerce platform</strong> built for a luxury furniture brand, 
-        <span class="more-text">offering an elegant shopping experience with optimized performance and custom CMS modules.</span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://www.alhuzaifa.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-    <!-- Bahrain Duty Free -->
-    <div class="project-card glassy-card">
-      <h3>Bahrain Duty Free
-       
-      </h3>
-      <p class="project-text">
-        A high-end <strong>Magento-based e-commerce solution</strong> developed for 
-        Bahrain Duty Free,<span class="more-text"> integrating <strong>multi-language support</strong>, 
-        <strong>inventory sync</strong>, and a robust order management system.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-       <a href="https://bdutyfree.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-    <!-- The People Agency -->
-    <div class="project-card glassy-card">
-      <h3>The People Agency
-        
-      </h3>
-      <p class="project-text">
-        A <strong>WordPress-powered CMS website</strong> designed for a talent and modeling agency.  
-        The website delivers a minimal, 
-        <span class="more-text">fast-loading interface with intuitive admin controls 
-        for content management.</span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://thepeople-agency.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-    <!-- Taxman.Ai -->
-     <div class="project-card glassy-card">
-      <h3>Taxman.Ai
-        
-      </h3>
-      <p class="project-text">
-        A <strong>pure Laravel application</strong> integrated with <strong>custom AI modules</strong> 
-        for smart tax predictions.  
-        <span class="more-text">
-          Includes a <strong>mobile APK</strong> for on-the-go access and personalized 
-          tax analytics.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://taxmen.ai/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-     <div class="project-card glassy-card">
-      <h3>Docib Pharmacy</h3>
-      <p class="project-text">
-         A fully customized <strong>e-commerce and inventory management system</strong> 
-        built for a pharmacy chain.  
-        <span class="more-text">
-          Combines online ordering with <strong>real-time stock control</strong> 
-          and <strong>pharma-specific product workflows</strong>.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-    </div>
-    <div class="project-card glassy-card">
-      <h3> Zamra Travels
-        
-      </h3>
-      <p class="project-text">
-        A fully customized <strong>travel agency management platform</strong> 
-        built specifically for travel businesses.  
-        <span class="more-text">
-          Includes <strong>flight chart management</strong>, 
-          <strong>agency management</strong>, 
-          and a wide range of <strong>travel agency–based functionalities</strong>.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-      <a href="https://zamratravels.com/" target="_blank" style="color: white;" class="view-site">
-          <i class="fa-solid fa-globe"></i>
-        </a>
-    </div>
-
-  <div class="project-card glassy-card">
-  <h3>
-    Adana Real Estate
-    
-  </h3>
-  <p class="project-text">
-    A fully customized <strong>CMS-based website</strong> 
-    built for a real estate company.  
-    <span class="more-text">
-      Includes <strong>dynamic content management</strong>, 
-      <strong>customizable pages</strong>, 
-      and <strong>integrated blog functionality</strong>.
-    </span>
-  </p>
-  <a href="#" class="read-more">Read More</a>
-  <a href="https://www.adanarealestate.com/" target="_blank" style="color: white;" class="view-site">
-      <i class="fa-solid fa-globe"></i>
-    </a>
-  </div>
-
-  <div class="project-card glassy-card">
-  <h3>
-    Al Mudabir Group
-    
-  </h3>
-  <p class="project-text">
-    A fully customized <strong>corporate CMS website</strong> 
-    built for an industry advisory firm.  
-    <span class="more-text">
-      Features <strong>dynamic content updates</strong>, 
-      <strong>custom pages</strong>, 
-      and <strong>blog management</strong>.
-    </span>
-  </p>
-  <a href="#" class="read-more">Read More</a>
-  <a href="https://www.almudabirgroup.com/" target="_blank" style="color: white;" class="view-site">
-      <i class="fa-solid fa-globe"></i>
-    </a>
-  </div>
-
-  <div class="project-card glassy-card">
-  <h3>
-    Smartec
-  </h3>
-  <p class="project-text">
-    A fully customized <strong>CMS-based website</strong> 
-    developed for a CCTV and automation solutions company.  
-    <span class="more-text">
-      Includes <strong>dynamic content management</strong>, 
-      <strong>custom pages</strong>, 
-      and <strong>blog modules</strong> for easy updates.
-    </span>
-  </p>
-  <a href="#" class="read-more">Read More</a>
-  <a href="https://smartec.ae/" target="_blank" style="color: white;" class="view-site">
-      <i class="fa-solid fa-globe"></i>
-    </a>
-  </div>
-
-     <!-- Store9 -->
-    <div class="project-card glassy-card">
-      <h3>Store9</h3>
-      <p class="project-text">
-        A full-stack <strong>e-commerce platform</strong> developed using <strong>Next.js</strong> 
-        for lightning-fast front-end performance, integrated with Laravel APIs.  
-        <span class="more-text">
-          Features include <strong>product browsing</strong>, <strong>cart management</strong>, 
-          and <strong>user account handling</strong>.
-        </span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-    </div>
-
-    <!-- Property9 -->
-    <div class="project-card glassy-card">
-      <h3>Property9</h3>
-      <p class="project-text">
-        A property listing platform featuring a <strong>React.js</strong> frontend 
-        and a <strong>Laravel + MySQL</strong> backend API.  
-        <span class="more-text">Designed for scalability and optimized property search experience.</span>
-      </p>
-      <a href="#" class="read-more">Read More</a>
-    </div>
-  </div>
-</section>
-
-
-  <section id="contact" class="glassy contact">
-  <div class="contact-content">
-    <div class="contact-text">
-      <h2>Contact Me</h2>
-      <p>
-        Have a project in mind, or just want to say hi?  
-        Feel free to drop a message — I’m always open to discussing 
-        new ideas, collaborations, or freelance opportunities.
-      </p>
-
-      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="9b7ac275-36cc-48ff-a25e-2f89b72bb7a1">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-    </div>
-
-    <div class="contact-image">
-      <img src="images/contact.png" alt="3D contact illustration" />
-    </div>
-  </div>
-</section>
-
-
-  <footer class="glassy footer">
-    <p>Copyright © 2025 Rasheed Kp - All rights reserved</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Floating back-to-top -->
+  <a href="#hero" class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
+  <!-- Project details dialog -->
+  <dialog class="modal" id="project-modal" aria-labelledby="modal-title">
+    <div class="modal-inner">
+      <button type="button" class="icon-btn modal-close" aria-label="Close project details"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      <div class="modal-cover"></div>
+      <div class="modal-body">
+        <p class="modal-industry eyebrow"></p>
+        <h3 id="modal-title" class="modal-title"></h3>
+        <div class="modal-summary"></div>
+        <ul class="tech-tags modal-tags"></ul>
+        <div class="modal-details"></div>
+        <div class="modal-actions"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Toast notifications -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
